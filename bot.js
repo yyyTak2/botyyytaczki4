@@ -20,4 +20,10 @@ if(message.content.toLowerCase() === '!nekko')
     
 });
 
+bot.on('message', message => {
+if(message.content.toLowerCase() === '!strona')
+   message.channel.send('**Link do strony serwera ➫ https://olekmajewski321.wixsite.com/discord**');
+
+});
+    
 bot.login(process.env.B0T_T0KEN);
