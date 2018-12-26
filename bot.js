@@ -16,7 +16,7 @@ bot.on('ready', () => {
 
 bot.on('message', message => {
 if(message.content.toLowerCase() === '!strona')
-   message.channel.send('**Link do strony serwera ➫ https://olekmajewski321.wixsite.com/discord**');
+   message.channel.send('**Link do strony Przyjaznej Społeczności ➫ https://olekmajewski321.wixsite.com/discord**');
 
 });
     
