@@ -17,17 +17,5 @@ if(message.content.toLowerCase() === '!strona')
    message.channel.send('**Link do strony Przyjaznej Społeczności ➫ https://olekmajewski321.wixsite.com/discord**');
 
 });
-
-const Discord = require('discord.js');
-const randomPuppy = require('random-puppy');
-
-randomPuppy('!memes')
-    .then(url => {
-        const embed = new Discord.MessageEmbed()
-            .setTimestamp()
-            .setImage(url)
-            .setColor('RANDOM')
-        message.channel.send(embed);
-    });
     
 bot.login(process.env.B0T_T0KEN);
