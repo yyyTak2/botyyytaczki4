@@ -1,10 +1,6 @@
 // Calling Packages
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const weather = require('weather-js'); // Make sure you call the packages you install.
-
-// Global Settings
-const prefix = '~'; // This is the prefix, you can change it to whatever you want.
 
 // Functions
 function hook(channel, title, message, color, avatar) { // This function uses quite a few options. The last 2 are optional.
@@ -16,16 +12,12 @@ function hook(channel, title, message, color, avatar) { // This function uses qu
     if (!color) color = 'd9a744'; // This is an optional variable. Therefore the default HEX color will be whatever you post there. Mine will be d9a744
     if (!avatar) avatar = 'https://cdn4.iconfinder.com/data/icons/technology-devices-1/500/speech-bubble-128.png' // This is also an optional variable, you can change the default to any icon.
 
-    // We want to remove spaces from color & url, since they might have it on the sides.
-    color = color.replace(/\s/g, '');
-    avatar = avatar.replace(/\s/g, '');
-
     // This is the start of creating the webhook
     channel.fetchWebhooks() // This gets the webhooks in the channel
         .then(webhook => {
 
             // Fetches the webhook we will use for each hook
-            let foundHook = webhook.find('name', 'Webhook'); // You can rename 'Webhook' to the name of your bot if you like, people will see if under the webhooks tab of the channel.
+            let foundHook = webhook.find('Siusiak', 'Webhook'); // You can rename 'Webhook' to the name of your bot if you like, people will see if under the webhooks tab of the channel.
 
             // This runs if the webhook is not found.
             if (!foundHook) {
@@ -70,7 +62,7 @@ bot.on('message', message => {
     // Variables - Variables make it easy to call things, since it requires less typing.
     let msg = message.content.toUpperCase(); // This variable takes the message, and turns it all into uppercase so it isn't case sensitive.
     let sender = message.author; // This variable takes the message, and finds who the author is.
-    let cont = message.content.slice(prefix.length).split(" "); // This variable slices off the prefix, then puts the rest in an array based off the spaces
+    let cont = message.content.slice(prefix.length).split("-"); // This variable slices off the prefix, then puts the rest in an array based off the spaces
     let args = cont.slice(1); // This slices off the command in cont, only leaving the arguments.
 
     // Commands
@@ -178,5 +170,3 @@ bot.on('ready', () => {
     console.log('Bot started.');
 
 });
-
-bot.login('<token>');
