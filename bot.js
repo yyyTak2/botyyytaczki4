@@ -6,11 +6,13 @@ bot.on('ready', () => {
     bot.user.setStatus('dnd')
     bot.user.setPresence({
         game: {
-            name: 'Olaf to kutas',
-            type: 0
+            name: 'Olaf to kutasek mały 🍌',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/yyytak32"
+            
         }
     });
-});	
+});
 
 bot.on('message', message => {
 if(message.content.toLowerCase() === '!twojastara')
