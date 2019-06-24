@@ -6,15 +6,15 @@ bot.on('ready', () => {
     bot.user.setStatus('dnd')
     bot.user.setPresence({
         game: {
-            name: '💤',
+            name: 'Olaf to kutas',
             type: 0
         }
     });
 });	
 
 bot.on('message', message => {
-if(message.content.toLowerCase() === '!strona')
-   message.channel.send('**Link do strony Przyjaznej Społeczności ➫ https://olekmajewski321.wixsite.com/discord**');
+if(message.content.toLowerCase() === '!twojastara')
+   message.channel.send('**Sklej pizde mała szmato**');
 
 });
     
