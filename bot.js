@@ -8,7 +8,7 @@ bot.on('ready', () => {
         game: {
             name: 'Olaf to kutasek mały 🍌',
             type: "STREAMING",
-            url: "https://yyytak.pl"
+            url: "https://www.twitch.tv/yyytak32"
             
         }
     });
