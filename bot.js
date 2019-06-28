@@ -16,7 +16,7 @@ bot.on('ready', () => {
 
 bot.on('message', message => {
 if(message.content.toLowerCase() === 'twoja stara')
-   message.channel.send('**Sklej pizde mała szmato**');
+   message.channel.send('**Sklej pizde mała szmato 🖕**');
 
 });
     
